@@ -1,0 +1,10 @@
+from flask import Flask
+from flask import *
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return render_template("firstpage.html")
+
+if __name__ == "__main__": #if experimenting port = 5000, for public port = 80
+    app.run(host='0.0.0.0', port=80)
